@@ -118,22 +118,6 @@ the ``assert_template_used`` method::
 When the template rendering is turned off the tests will also run faster and the view logic
 can be tested in isolation.
 
-Using with Twill
-----------------
-
-`Twill`_ is a simple language for browsing the Web through
-a command line interface.
-
-``Flask-Testing`` comes with a helper class for creating functional tests using Twill::
-
-    def test_something_with_twill(self):
-
-        with Twill(self.app, port=3000) as t:
-            t.browser.go(t.url("/"))
-
-
-The older ``TwillTestCase`` has been deprecated.
-
 Testing with SQLAlchemy
 -----------------------
 
@@ -251,14 +235,7 @@ API
 .. autoclass:: TestCase
    :members:
 
-.. autoclass:: Twill
-   :members:
-
-.. autoclass:: TwillTestCase
-   :members:
-
 .. _Flask: http://flask.pocoo.org
-.. _Twill: http://twill.idyll.org/
 .. _Fixture: http://farmdev.com/projects/fixture/index.html
 .. _SQLAlchemy: http://sqlalchemy.org
 .. _Flask-SQLAlchemy: http://packages.python.org/Flask-SQLAlchemy/
